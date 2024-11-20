@@ -27,7 +27,7 @@ class RestaurantOrderManagement:
 
         ttk.Label(frame, text="Restaurant Order Management",font=("Arial", 20, "bold")).grid(row=0,columnspan=3,padx=10,pady=10)
         
-        self.menu_lables = {}
+        self.menu_labels = {}
         self.menu_quantities = {}
         
         for i, (item, price) in enumerate(self.menu_items.items(), start=1):
@@ -35,7 +35,7 @@ class RestaurantOrderManagement:
                               text=f"{item} (${price}):",
                               font=("Arial", 12))
             label.grid(row=i, column=0, padx=10, pady=5)
-            self.menu_lables[item]= label
+            self.menu_labels[item]= label
             
             quantity_entry = ttk.Entry(frame, width=5)
             quantity_entry.grid(row=i, column=1, padx=10, pady=5)
